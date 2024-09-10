@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class BankAccountManagement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);bank
+
+        System.out.print("Enter current balance: ");
+        double currentBalance = scanner.nextDouble();
+
+        System.out.print("Enter withdrawal amount: ");
+        double withdrawalAmount = scanner.nextDouble();
+
+        if (withdrawalAmount > currentBalance) {
+            System.out.println("Error: Insufficient balance.");
+        } else if (withdrawalAmount == 0) {
+            System.out.println("Withdrawal successful. New balance: " + currentBalance);
+        } else {
+            double newBalance = currentBalance - withdrawalAmount;
+            System.out.println("Withdrawal successful. New balance: " + newBalance);
+        }
+    }
+}
